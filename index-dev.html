@@ -1,0 +1,1245 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>TymeBank</title>
+	<style type="text/css">
+		/* RESET STYLES */
+		/* Force Outlook to provide a "view in browser" message */
+		#outlook a {
+			padding: 0;
+		}
+
+		/* Force Hotmail to display emails at full width */
+		.ReadMsgBody {
+			width: 100%;
+		}
+
+		.ExternalClass {
+			width: 100%;
+		}
+
+		/* Force Hotmail to display normal line spacing */
+		.ExternalClass,
+		.ExternalClass p,
+		.ExternalClass span,
+		.ExternalClass font,
+		.ExternalClass td,
+		.ExternalClass div {
+			line-height: 100%;
+		}
+
+		/* Prevent WebKit and Windows mobile changing default text sizes */
+		body,
+		table,
+		td,
+		a {
+			-webkit-text-size-adjust: 100%;
+			-ms-text-size-adjust: 100%;
+		}
+
+		/* Remove spacing between tables in Outlook 2007 and up */
+		table,
+		td {
+			mso-table-lspace: 0pt;
+			mso-table-rspace: 0pt;
+		}
+
+		table {
+			border-collapse: collapse !important;
+		}
+
+		body {
+			width: 100% !important;
+			height: 100% !important;
+			background-color: #ebebeb !important;
+			margin: 0;
+			padding: 0;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		img {
+			border: 0;
+			height: auto;
+			line-height: 100%;
+			outline: none;
+			text-decoration: none;
+			-ms-interpolation-mode: bicubic;
+		}
+
+
+		/* ====== IMAGE ====== */
+		/* used for images that need to be responsive on mobile */
+		.responsive {
+			width: 100%;
+			height: auto;
+			display: block;
+			outline: none;
+			border: none;
+			text-decoration: none;
+			-ms-interpolation-mode: bicubic;
+		}
+
+		/* used for fixed width images */
+		.img {
+			/* width: auto;
+			height: auto; */
+			display: block;
+			outline: none;
+			border: none;
+			text-decoration: none;
+			-ms-interpolation-mode: bicubic;
+		}
+
+		/* ====== LINKS & BUTTONS ====== */
+		a {
+			text-decoration: none;
+			outline: none;
+			border: none;
+			padding: 0;
+		}
+
+		.button-container {
+			border-radius: 5px;
+			padding: 12px 50px;
+		}
+
+		.button-outline-black {
+			border: 2px solid #000000;
+			padding: 10px 20px;
+		}
+
+		.button {
+			font-size: 14px;
+			font-family: Tahoma, sans-serif;
+			font-weight: 800;
+			text-decoration: none;
+			border-radius: 5px;
+			display: inline-block;
+		}
+
+		.app-btn {
+			padding-right: 15px
+		}
+
+		/* used on all a tags that has <img> inside */
+		.img-link {
+			display: block;
+		}
+
+		.text-link-underline {
+			font-size: 16px;
+			line-height: 100%;
+			font-family: Tahoma, sans-serif;
+			font-weight: 300;
+			color: #000000;
+			text-decoration: none;
+			margin: 0;
+			padding: 0;
+			text-decoration: underline;
+		}
+
+		/* windows 10 mail */
+		font {
+			color: #000000;
+		}
+
+		/* body-copy-sm&xs size */
+		.text-link-sm {
+			font-size: 14px;
+		}
+
+		.text-link-xs {
+			font-size: 12px;
+		}
+
+		/* ====== COPY ====== */
+		/* All black headings */
+		h1,
+		h2,
+		.h2,
+		h3 {
+			color: #000000;
+			/* font-weight: bold; */
+			font-family: Tahoma, sans-serif;
+			text-align: left;
+			padding: 0;
+			margin: 0;
+		}
+
+		/* .h2 only used for heading with icon */
+		h1 {
+			font-size: 40px;
+			font-weight: 800;
+			line-height: 44px;
+		}
+
+		h2,
+		.h2 {
+			font-size: 20px;
+		}
+
+		.h2 {
+			line-height: 100%
+		}
+
+		h2 {
+			margin-bottom: 20px;
+			line-height: 130%;
+		}
+
+		h3 {
+			font-size: 18px;
+			margin-bottom: 10px;
+		}
+
+		/* heading with icon left */
+		.heading-icon {
+			padding-right: 20px
+		}
+
+		.body-copy,
+		.body-copy-xl,
+		.body-copy-l,
+		.body-copy-sm,
+		.body-copy-s,
+		.body-copy-xs,
+		.blockquote {
+			line-height: 160%;
+			color: #000000;
+			margin: 0;
+			padding: 0;
+			font-weight: 400;
+			font-family: Tahoma, sans-serif;
+			mso-line-height-rule: exactly;
+		}
+
+		.body-copy {
+			font-size: 16px;
+		}
+
+		.body-copy-xs {
+			font-size: 12px;
+			font-family: Arial, "Lucida Grande", sans-serif;
+		}
+
+		.body-copy-s {
+			font-size: 15px;
+		}
+
+		.body-copy-sm {
+			font-size: 14px;
+		}
+
+		.body-copy-l {
+			font-size: 20px;
+		}
+
+		.body-copy-xl {
+			font-size: 24px;
+		}
+
+		.blockquote {
+			font-family: 'Times New Roman', sans-serif;
+			font-size: 60px;
+			line-height: 0;
+		}
+
+		.text-center {
+			text-align: center;
+		}
+
+		.text-left {
+			text-align: left;
+		}
+
+		.text-white {
+			color: #ffffff;
+		}
+
+		.text-yellow-1,
+		.text-yellow-1:active
+		.text-yellow-1:visited {
+			color: #fdc600;
+		}
+		
+		.text-yellow-2 {
+			color: #FEDD66;
+		}
+
+		.text-yellow-3 {
+			color: #FEEEB2;
+		}
+
+		.text-grey-1 {
+			color: #58595B;
+		}
+
+		.text-line-height-md {
+			line-height: 120%;
+		}
+
+
+		/* ====== SPACING ====== */
+		/* Use on h2 with icon */
+
+		.vert-xs {
+			padding-bottom: 10px;
+		}
+
+		.vert-top-xs {
+			padding-top: 10px;
+		}
+
+		.vert-top-sm {
+			padding-top: 15px;
+		}
+
+		.vert-top-m {
+			padding-top: 20px;
+		}
+
+		.vert-top-l {
+			padding-top: 40px;
+		}
+
+		.vert-top-xl {
+			padding-top: 60px;
+		}
+
+		.vert-sm {
+			padding-bottom: 15px;
+		}
+
+		/* Use on body-copy p tags that should have vertical spacing at bottom */
+		.vert-m {
+			padding-bottom: 20px;
+		
+		}
+
+		.vert-l {
+			padding-bottom: 40px;
+		}
+
+		.left-sm {
+			padding-left: 10px;
+		}
+
+		.left-m {
+			padding-left: 15px;
+		}
+
+		.right-sm {
+			padding-right: 10px;
+		}
+
+		.no-padding {
+			padding: 0;
+		}
+
+		.bullet-pad-sx {
+			padding: 5px 10px 0 0;
+		}
+
+		/* ====== LAYOUT ====== */
+		.header {
+			width: 640px;
+			padding: 20px 20px 20px 40px;
+		}
+
+		.section {
+			padding: 40px;
+		}
+
+		.section-sm {
+			padding: 20px;
+		}
+
+		.section-card {
+			padding: 40px;
+		}
+
+		.section-m {
+			padding: 15px;
+		}
+
+		.section-xs {
+			padding: 10px;
+		}
+
+		/* section-lg is for white bg content only */
+		.section-lg {
+			width: 640px;
+			padding: 60px;
+		}
+
+		.section-lr {
+			padding: 25px 40px;
+		}
+
+		.section-custom {
+			padding: 20px 10px 0 10px;
+		}
+
+		.section-custom2 {
+			padding: 0 20px 0 0;
+		}
+
+		.section-line-top {
+			border-top: 5px solid #52666E;
+		}
+
+		.yellow-line-bottom {
+			border-bottom: 5px solid #FFC425;
+		}
+
+		.yellow-line-top {
+			border-top: 5px solid #FDC600;
+		}
+
+		.thick-yellow-line-bottom {
+			border-bottom: 8px solid #FFC425;
+		}
+
+		.blue-1-line-bottom {
+			border-bottom: 5px solid #6C94A6;
+		}
+
+		.blue-1-line-top {
+			border-top: 5px solid #6C94A6;
+		}
+
+		.blue-2-line-top {
+			border-top: 5px solid #8F9EA6;
+		}
+
+		.read-online-strip {
+			padding-right: 40px;
+			text-decoration: underline;
+		}
+
+		.icon-stack {
+			padding: 20px 0;
+		}
+
+		.bg-gray {
+			background-color: #e9eff2;
+		}
+
+		.bg-white {
+			background-color: #ffffff;
+		}
+
+		.bg-black {
+			background-color: #000000;
+		}
+
+		.bg-yellow-1 {
+			background-color: #fdc600;
+		}
+
+		.bg-yellow-2 {
+			background-color: #F7D782;
+		}
+
+		.bg-yellow-3 {
+			background-color: #FEEEB2;
+		}
+
+		.bg-yellow-4 {
+			background-color: #FFF4CC;
+		}
+
+		.bg-grey-1 {
+			background-color: #58595B;
+		}
+
+		.bg-grey-2 {
+			background-color: #181818;
+		}
+
+		.bg-grey-3 {
+			background-color: #F2F2F4;
+		}
+
+		.bg-grey-4 {
+			background-color: #D4D5D6;
+		}
+
+		.bg-grey-5 {
+			background-color: #DEDFE0;
+		}
+
+		.bg-grey-6 {
+			background-color: #E9EAEA;
+		}
+
+		.bg-blue-1 {
+			background-color: #8EACBA;
+		}
+
+		.bg-blue-2 {
+			background-color: #A7BFCA;
+		}
+
+		.bg-blue-3 {
+			background-color: #D3DFE4;
+		}
+
+		.col-2 {
+			width: 50%;
+		}
+
+		.col-3 {
+			width: 170px;
+			padding: 5px;
+		}
+
+		/* .col-3:last-child {
+			padding-right:0;
+		} */
+
+		.col-3-buttons {
+			display: inline-block;
+			width: 180px;
+			margin-right: 10px;
+		}
+
+		.col-3-buttons:last-child {
+			margin-right: 0px;
+		}
+
+		.col-3-cards {
+			border-left: 5px solid #fdc600;
+			height: 120px;
+		}
+
+		/* .col-3 table {
+			height: 180px;
+		} */
+
+		.col-copy {
+			width: 240px;
+			padding-right: 20px;
+			text-align: left;
+		}
+
+		.col-copy,
+		.col-img {
+			/* same as vert-sm */
+			padding-bottom: 25px
+		}
+
+		/* for last item that should not have padding */
+		.no-space-bottom {
+			padding-bottom: 0;
+		}
+
+		.no-padding {
+			padding: 0;
+			margin: 0;
+		}
+
+
+		/* ====== LISTS ====== */
+		/* Default lists ul & ol */
+		.list li {
+			padding-bottom: 10px;
+			mso-special-format: bullet;
+		}
+
+		.list li:last-child {
+			padding-bottom: 0;
+		}
+
+		.list-icon {
+			padding: 7px 20px 0 0;
+		}
+
+		.list-copy {
+			padding-bottom: 15px;
+		}
+
+		/* ====== TABLE ====== */
+		.table-data th,
+		.table-data td {
+			padding: 15px;
+			font-size: 14px;
+			line-height: 160%;
+			color: #000000;
+			font-weight: 300;
+			font-family: Tahoma, sans-serif;
+			text-align: left;
+			border-bottom: 4px solid white;
+			border-right: 4px solid white;
+		}
+
+		.table-data th:last-child,
+		.table-data td:last-child {
+			border-right: none;
+		}
+
+		.table-data th {
+			background-color: #fdc600;
+		}
+
+		.table-data td {
+			background-color: #edebeb;
+		}
+
+		/* ====== FOOTER ====== */
+		.footer {
+			width: 640px;
+			padding: 40px ;
+			background-color: #000000;
+		}
+
+		.footer-logo {
+			text-align: left;
+		}
+
+		.social {
+			padding: 0 16px;
+		}
+
+		.social:last-child {
+			padding-right: 0;
+		}
+
+		.mobile-center {
+			text-align: right !important;
+		}
+
+		/* ====== ACCESIBILITY ====== */
+		/* add to items with alt tags, so when images are missing, the ALT text is readible */
+		.a11y-on-white,
+		.a11y-locked-white,
+		.a11y-on-black,
+		.a11y-locked-black {
+			font-family: Tahoma, Arial, sans-serif;
+		}
+
+		.a11y-on-white {
+			color: #000000;
+		}
+
+		.a11y-on-black {
+			color: #ffffff;
+		}
+
+		.a11y-locked-white {
+			color: #ffffff;
+		}
+
+		.a11y-locked-black {
+			color: #000000;
+		}
+
+		/* ====== MOBILE  ====== */
+		@media screen and (max-width: 640px) {
+
+			.body-copy {
+				font-size: 18px !important;
+			}
+
+			.footer {
+				width: 100% !important;
+				padding: 20px !important;
+			}
+
+			.header {
+				width: 100% !important;
+				padding: 20px 20px 0px 20px !important;
+			}
+
+			.responsive-table {
+				width: 100% !important;
+			}
+
+			.responsive-table tr td {
+				width: inherit !important;
+			}
+
+			.section,
+			.section-card,
+			.section-lg,
+			.section-m,
+			.section-lr {
+				padding: 40px 20px !important;
+				display: block !important;
+			}
+
+			
+			.section-custom2 {
+				padding: 0px !important;
+				display: block !important;
+			}
+
+			.section-sm,
+			.section-m{
+				padding: 20px !important;
+				display: block !important;
+			}
+
+			.section-custom,
+			.section-xs {
+				padding: 10px !important;
+			}
+
+			.app-btn {
+				padding-right: 0 !important;
+				padding-bottom: 10px !important
+			}
+
+			/* td auto so the a tag does not span the full width  */
+			.mobile-auto {
+				display: inline-block !important;
+			}
+
+			.hidden-mobile {
+				display: none;
+			}
+
+			.col-2,
+			.col-3,
+			.col-3-buttons,
+			.col-2-flush,
+			.col-copy,
+			.col-img,
+			.col-2-foot,
+			.app-btn,
+			.col-2-collapse {
+				width: 100% !important;
+				display: block !important;
+				box-sizing: border-box !important;
+			}
+
+			.col-2 {
+				width: 50%;
+			}
+
+			.col-3 {
+				padding-bottom: 15px !important;
+			}
+
+			.col-3-buttons {
+				padding: 5px !important;
+			}
+
+			.col-3-cards {
+				height: inherit !important;
+			}
+
+			.col-3 table {
+				height: auto;
+			}
+
+			.col-img {
+				text-align: left;
+			}
+
+			.btn-fullwidth {
+				display: block !important;
+				width: 100% !important;
+				background-color: #fdc600 !important;
+				border-radius: 4px !important;
+			}
+
+			.list {
+				padding-left: 20px !important;
+			}
+
+			.scroll-table {
+				overflow: hidden;
+				max-width: calc(100vw - 40px);
+
+			}
+
+			.scroll-table-inside {
+				overflow-y: auto;
+				-webkit-overflow-scrolling: touch;
+			}
+
+			.table-data th,
+			.table-data td {
+				font-size: 16px !important;
+			}
+
+			.social {
+				float: none !important;
+				margin: 0 20px;
+			}
+
+			.footer-logo {
+				margin: auto !important;
+			}
+
+			.vert-m-mobile {
+				padding-bottom: 20px !important;
+			}
+
+			.vert-l-mobile {
+				padding-bottom: 40px !important;
+			}
+
+			.left-sm {
+				padding-left: 0 !important;
+			}
+
+			.left-m {
+				padding-left: 15px !important;
+			}
+
+			.mobile-center {
+				text-align: center !important;
+			}
+
+			.mobile-full-width {
+				display: block !important;
+				width: 100% !important;
+				box-sizing: border-box !important;
+			}
+
+			.white-border-left {
+				border-left: 2px solid #ffff !important;
+			}
+
+			.white-border-right {
+				border-right: 2px solid #ffff !important;
+			}
+
+			.white-border-top {
+				border-top: 2px solid #ffff !important;
+			}
+
+			.white-border-bottom {
+				border-bottom: 2px solid #ffff !important;
+			}
+
+		}
+
+		/* ====== DARK MODE  ====== */
+		@media (prefers-color-scheme: dark) {
+
+			.a11y-on-white {
+				color: #000000 !important;
+			}
+
+			.a11y-on-black {
+				color: #ffffff !important;
+			}
+
+			.text-black {
+				color: #000000 !important;
+			}
+
+			.text-yellow-1,
+			.text-yellow-1:active
+			.text-yellow-1:visited {
+				color: #fdc600 !important;
+			}
+			
+			.text-yellow-2 {
+				color: #FEDD66 !important;
+			}
+
+			.text-yellow-3 {
+				color: #FEEEB2 !important;
+			}
+
+			.text-grey-1 {
+				color: #58595B !important;
+			}
+
+			.text-white {
+				color: #ffffff !important;
+			}
+
+			.bg-white {
+				background-color: #ffffff !important;
+			}
+
+			.bg-black {
+				background-color: #000000 !important;
+			}
+
+			.bg-yellow-1 {
+				background-color: #fdc600 !important;
+			}
+
+			.bg-yellow-2 {
+				background-color: #FEDD66 !important;
+			}
+
+			.bg-yellow-3 {
+				background-color: #FEEEB2 !important;
+			}
+
+			.bg-grey-1 {
+				background-color: #58595B !important;
+			}
+
+			.bg-grey-2 {
+				background-color: #181818 !important;
+			}
+
+			.bg-grey-3 {
+				background-color: #F2F2F4 !important;
+			}
+
+			.bg-blue-1 {
+				background-color: #759BAB !important;
+			}
+
+			.bg-blue-2 {
+				background-color: #A7BFCA !important;
+			}
+
+			.bg-blue-3 {
+				background-color: #D3DFE4 !important;
+			}
+
+			.button-outline-black {
+				border: 4px solid #000000 !important;
+			}
+
+			.yellow-line-bottom {
+				border-bottom: 5px solid #FFC425 !important;
+			}
+
+			.yellow-line-top {
+				border-top: 5px solid #FDC600 !important;
+			}
+
+			.thick-yellow-line-bottom {
+				border-bottom: 8px solid #FFC425 !important;
+			}
+
+			.blue-1-line-bottom {
+				border-bottom: 5px solid #6C94A6 !important;
+			}
+
+			.blue-1-line-top {
+				border-top: 5px solid #6C94A6 !important;
+			}
+
+			.blue-2-line-top {
+				border-top: 5px solid #8F9EA6 !important;
+			}
+
+			.bullet-pad-sx {
+				color: #000000 !important;
+			}
+
+			.white-border-left {
+				border-left: 2px solid #ffff !important;
+			}
+
+			.white-border-right {
+				border-right: 2px solid #ffff !important;
+			}
+
+			.white-border-top {
+				border-top: 2px solid #ffff !important;
+			}
+
+			.white-border-bottom {
+				border-bottom: 2px solid #ffff !important;
+			}
+		}
+		
+	</style>
+
+</head>
+
+<body>
+	<center>
+		<table border="0" cellpadding="0" cellspacing="0" width="640" class="responsive-table" role="presentation">
+			<tr>
+				<td bgcolor="#F2F2F4">
+					<!-- open in browser -->
+					<table border="0" cellpadding="0" cellspacing="0" class="responsive-table" role="presentation"
+						width="640">
+						<tr>
+							<td class="read-online-strip bg-grey-2" align="right" valign="middle" height="38">
+								<a href="#" target="_blank" title="Tymebank.co.za"
+									class="text-link-sm text-white a11y-locked-white">
+									Link
+								</a>
+							</td>
+						</tr>
+					</table>
+					<!-- header -->
+					<table border="0" cellpadding="0" cellspacing="0" class="responsive-table" role="presentation"
+						width="640">
+						<tr>
+							<td class="bg-white header yellow-line-bottom">
+								<!-- header section with logo -->
+								<table border="0" cellpadding="0" cellspacing="0" class="responsive-table" role="presentation" width="580">
+									<tr>
+										<td class="col-2" width="300" valign="top">
+											<table border="0" cellpadding="0" cellspacing="0" class="responsive-table"
+												role="presentation" width="300">
+												<tr>
+													<td class="vert-m">
+														<a href="https://www.tymebank.co.za/personal-banking/accounts/moretyme/?utm_source=grapevine&utm_medium=email&utm_campaign=MoreTyme_Collection_Mailer_1_Day_After&utm_term=MoreTyme_Collection&utm_content=MoreTyme_Collection_Mailer_1_Day_After" target="_blank" title="Tymebank.co.za" class="img-link a11y-on-white">
+															<img src="images/moretyme-logo.png" alt="MoreTyme" class="img" width="118" height="50" />
+														</a>
+													</td>
+												</tr>
+												<tr>
+													<td class="vert-m">
+														<h1 class="text-black">Let's get <br class="hidden-mobile" />back on track</h1>
+													</td>
+												</tr>
+												<tr>
+													<td class="vert-m-mobile">
+														<p class="body-copy text-grey-1">Your MoreTyme payment was <br class="hidden-mobile" />due yesterday</p>
+													</td>
+												</tr>
+											</table>
+										</td>
+										<td class="col-2 vert-m-mobile" width="270" align="center">
+											<center>
+												<img src="images/moretyme-header-image.png" alt="" class="img" width="270" />
+											</center>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<!-- intro paragraph  -->
+					<table border="0" cellspacing="0" cellpadding="0" class="responsive-table" role="presentation"
+						width="640" bgcolor="#F2F2F4">
+						<tr>
+							<td class="section bg-grey-3 blue-1-line-bottom">
+								<table border="0" cellspacing="0" cellpadding="0" class="responsive-table"
+									role="presentation" width="560" bgcolor="#F2F2F4">
+									<tr>
+										<td class="vert-sm bg-grey-3">
+											<p class="body-copy-l text-left">
+												<strong>Dear [{first name}],</strong>
+											</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="bg-grey-3">
+											<p class="body-copy text-grey-1 text-left">
+												Your <strong>MoreTyme</strong> payment was not received due to insufficient funds in your EveryDay account. We want you to continue enjoying the convenience of shopping with <strong>MoreTyme</strong>, so make sure you have <strong>[{*INCENTIVE_AMT*}] in your account on [{*QUALIFY_FREQ*}]</strong> to settle your payment and avoid penalty fees and interest.
+												<br /><br />
+												<strong>You've got this!</strong>
+												<br />
+												The TymeBank Team
+											</p>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<!-- table of content with cards -->
+					<table border="0" cellpadding="0" cellspacing="0" class="responsive-table" role="presentation" width="640">
+						<tr>
+							<td class="section bg-blue-3 yellow-line-bottom" valign="middle">
+								
+								<table border="0" cellspacing="0" cellpadding="0" class="responsive-table"
+									role="presentation">
+									<tr>
+										<td class="vert-m bg-blue-3 right-sm">
+											<img src="images/money.png" alt="" class="img a11y-on-white bg-blue-3"
+												width="60" />
+										</td>
+										<td class="vert-m" valign="middle">
+											<p class="h2"><strong>How To Add Money To Your Account</strong></p>
+										</td>
+									</tr>
+								</table>
+
+								<table border="0" cellspacing="0" cellpadding="0" class="responsive-table" role="presentation">
+									<tr>
+										<td class="bullet-pad-sx" valign="top">&bull;</td>
+										<td class="vert-xs" align="left">
+											<p class="body-copy"><strong>EFT:</strong> Transfer money into your <strong>TymeBank</strong> EveryDay account from a different bank account</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="bullet-pad-sx" valign="top">&bull;</td>
+										<td class="vert-xs" align="left">
+											<p class="body-copy"><strong>Add Money:</strong> Login to your <strong>TymeBank</strong> app and tap the Add Money button to link your other bank card to your <strong>TymeBank</strong> account</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="bullet-pad-sx" valign="top">&bull;</td>
+										<td class="vert-xs" align="left">
+											<p class="body-copy">
+												Use a <strong>TymeCode</strong> to deposit cash at Pick n Pay and Boxer stores.
+												<br />
+												Here is how:
+											</p>
+										</td>
+									</tr>
+								</table>
+
+								<table border="0" cellspacing="0" cellpadding="0" class="responsive-table" role="presentation" width="560">
+									<tr>
+										<td class="vert-m left-m" valign="top">
+											<p class="body-copy text-left">
+												1. Open the <strong>TymeBank app</strong> for Android and tap 'Cash' then select 'Cash Deposit' to receive a TymeCode to give to the cashier for your cash deposit
+											</p>
+										</td>
+									</tr>
+									<tr>
+										<td class="left-m" valign="top">
+											<p class="body-copy text-left">
+												2. Dial *120*543# and enter your login PIN, then select option 6 to receive a <strong>TymeCode</strong> and make your cash deposit
+											</p>
+										</td>
+									</tr>
+								</table>
+
+							</td>
+						</tr>
+					</table>
+					<!-- Footer -->
+					<table border="0" cellpadding="0" cellspacing="0" class="responsive-table" role="presentation"
+						width="640">
+						<tr>
+							<td>
+								<!-- graphic -->
+								<table border="0" cellpadding="0" cellspacing="0" class="responsive-table"
+									role="presentation" width="640">
+									<tr>
+										<td class="footer">
+											<table border="0" cellpadding="0" cellspacing="0" class="responsive-table"
+												role="presentation" width="560">
+												<tr>
+													<th class="col-2 vert-l footer-logo" valign="middle">
+														<a href="https://www.tymebank.co.za/?utm_source=grapevine&utm_medium=email&utm_campaign=MoreTyme_Collection_Mailer_1_Day_After&utm_term=MoreTyme_Collection&utm_content=MoreTyme_Collection_Mailer_1_Day_After" target="_blank"
+															title="Tymebank.co.za" class="img-link a11y-locked-white">
+															<img src="images/logo-white.png" alt="Tymebank logo"
+																class="img footer-logo" width="160" />
+														</a>
+													</th>
+													<!-- social icons -->
+													<th valign="middle" class="col-2 vert-l"
+														role="presentation">
+														<center>
+															<table border="0" cellpadding="0" cellspacing="0">
+																<tr>
+																	<th class="social">
+																		<a href="https://wa.me/0860999119?text=Hi%20TymeBank!" target="_blank"
+																			title="Contact TymeBank on WhatsApp"
+																			class="a11y-locked-white">
+																			<img src="images/icon-social-whatsapp.png"
+																				alt="WhatsApp" class="img" width="24"
+																				height="24" />
+																		</a>
+																	</th>
+																	<th class="social">
+																		<a href="https://www.instagram.com/tymebankza/?utm_source=grapevine&utm_medium=email&utm_campaign=MoreTyme_Collection_Mailer_1_Day_After&utm_term=MoreTyme_Collection&utm_content=MoreTyme_Collection_Mailer_1_Day_After"
+																			target="_blank"
+																			title="Follow TymeBank on Instagram"
+																			class="a11y-locked-white">
+																			<img src="images/icon-social-instagram.png"
+																				alt="Instagram" class="img" width="24"
+																				height="24" />
+																		</a>
+																	</th>
+																	<th class="social">
+																		<a href="https://www.facebook.com/tymebankza/?utm_source=grapevine&utm_medium=email&utm_campaign=MoreTyme_Collection_Mailer_1_Day_After&utm_term=MoreTyme_Collection&utm_content=MoreTyme_Collection_Mailer_1_Day_After"
+																			target="_blank"
+																			title="Follow TymeBank on Facebook"
+																			class="a11y-locked-white">
+																			<img src="images/icon-social-facebook.png"
+																				alt="Facebook" class="img" width="24"
+																				height="24" />
+																		</a>
+																	</th>
+																	<th class="social">
+																		<a href="https://twitter.com/tymebankza?utm_source=grapevine&utm_medium=email&utm_campaign=MoreTyme_Collection_Mailer_1_Day_After&utm_term=MoreTyme_Collection&utm_content=MoreTyme_Collection_Mailer_1_Day_After"
+																			target="_blank"
+																			title="Follow TymeBank on Twitter"
+																			class="a11y-locked-white">
+																			<img src="images/icon-social-twitter.png"
+																				alt="Twitter" class="img" width="24"
+																				height="24" />
+																		</a>
+																	</th>
+																</tr>
+															</table>
+														</center>
+													</th>
+												</tr>
+											</table>
+											<table border="0" cellpadding="0" cellspacing="0" class="responsive-table"
+												role="presentation">
+												<tr>
+													<td colspan="2">
+														<p class="body-copy text-white vert-sm">
+															<strong>Need help? Call </strong><a href="tel:0860999119"
+																target="_blank" title="Call TymeBank"
+																class="text-link text-yellow-1"><strong>0860 999
+																	119</strong></a><br />
+
+															<strong>See the TymeBank</strong> <a href="https://www.tymebank.co.za/personal-banking/accounts/everyday-account/?utm_source=grapevine&utm_medium=email&utm_campaign=MoreTyme_Collection_Mailer_1_Day_After&utm_term=MoreTyme_Collection&utm_content=MoreTyme_Collection_Mailer_1_Day_After#about-fees" target="_blank"
+																title="TymeBank fees"
+																class="text-link text-yellow-1"><strong>fees</strong></a>
+															<strong>and</strong> <a href="https://www.tymebank.co.za/personal-banking/accounts/everyday-account/?utm_source=grapevine&utm_medium=email&utm_campaign=MoreTyme_Collection_Mailer_1_Day_After&utm_term=MoreTyme_Collection&utm_content=MoreTyme_Collection_Mailer_1_Day_After#profile-limits" target="_blank"
+																title="TymeBank limits"
+																class="text-link text-yellow-1"><strong>limits</strong></a><br />
+
+															<strong><a href="https://www.tymebank.co.za/?utm_source=grapevine&utm_medium=email&utm_campaign=MoreTyme_Collection_Mailer_1_Day_After&utm_term=MoreTyme_Collection&utm_content=MoreTyme_Collection_Mailer_1_Day_After"
+																	target="_blank" title="Visit tymebank.co.za"
+																	class="text-link text-yellow-1"><strong>Learn
+																		more</strong></a> about TymeBank today</strong>
+														</p>
+													</td>
+												</tr>
+												<tr>
+													<td colspan="2" class="vert-sm">
+														<p class="body-copy-sm text-white">
+															TymeBank is an authorised Financial Services (FSP 49140) and
+															Registered
+															Credit Provider (NCRCP 10774). Tyme Bank Limited Reg no:
+															2015/231510/06.
+														</p>
+													</td>
+												</tr>
+												<tr>
+													<td colspan="2">
+														<p class="body-copy-sm text-white">
+															<a href="https://www.tymebank.co.za/legal/terms-conditions?utm_source=grapevine&utm_medium=email&utm_campaign=MoreTyme_Collection_Mailer_1_Day_After&utm_term=MoreTyme_Collection&utm_content=MoreTyme_Collection_Mailer_1_Day_After"
+																target="_blank" title="Terms and conditions"
+																class="text-link-sm text-yellow-1"><strong>Terms and
+																	conditions</strong></a> <strong>apply.</strong> 
+															<strong>Unsubscribe</strong>
+															<a href="" target="_blank" title="Unsubscribe"
+																class="text-link-sm text-yellow-1"><strong>here</strong></a><strong>.</strong>
+														</p>
+													</td>
+												</tr>
+
+											</table>
+										</td>
+									</tr>
+								</table>
+
+
+							</td>
+						</tr>
+					</table>
+
+				</td>
+			</tr>
+		</table>
+	</center>
+
+</body>
+
+</html>
